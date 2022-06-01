@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+body {
+    background-color: var(--main-BG);
+    font-family: Outfit, sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: var(--card-BG);
+    width: 330px;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.image-div {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.image-div div {
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 55%);
+    top: 0;
+    width: 100%;
+    height: calc(100% - 4px);
+    opacity: 0;
+}
+.image-div div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image-div div:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in;
+}
+
+h3 {
+    color: var(--White);
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 20px;
+}
+.description {
+    color: var(--soft-blue);
+    margin: 1rem 0 1rem 0;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.price-day {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--soft-blue);
+}
+.price {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--Cyan);
+}
+.price img {
+    margin-right: 6px;
+}
+.day {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+.day img {
+    margin-right: 6px;
+}
+.creator {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 15px;
+    color: var(--soft-blue);
+}
+
+.avatar-img {
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 1rem;
+}
+
+.creator span {
+    color: var(--White);
+}
+
+.image,
+h3,
+span {
+    cursor: pointer;
+}
+h3:hover,
+span:hover {
+    color: var(--Cyan);
+}
+
+.image-div img {
+    top: 0;
+    left: 0;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
